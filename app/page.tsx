@@ -1,4 +1,5 @@
 import Card from "./components/card";
+import Cart from "./components/cart";
 
 export default function Home() {
   return (
@@ -15,9 +16,7 @@ export default function Home() {
           <Card imgSrc="/pexels-valeriiamiller-3020919.jpg" infoText="Good Luck Staying Together" />
           <Card imgSrc="/pexels-victorfreitas-685527.jpg" infoText="Too Good for This Place" />
         </div>
-        <div className="w-[31%] bg-gray-200">
-          <h1>hello</h1>
-        </div>
+        <Cart />
       </div>
     </>
   );
