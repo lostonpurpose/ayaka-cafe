@@ -1,9 +1,11 @@
 import Card from "./components/card";
 import Cart from "./components/cart";
+import Header from "./components/header";
 
 export default function Home() {
   return (
     <>
+      <Header />
       <div className="flex w-full">
         <div className="grid grid-cols-3 gap-4 flex-1">
           <Card imgSrc="/pexels-chevanon-302904.jpg" infoText="The Dandy" />
@@ -16,7 +18,7 @@ export default function Home() {
           <Card imgSrc="/pexels-valeriiamiller-3020919.jpg" infoText="Good Luck Staying Together" />
           <Card imgSrc="/pexels-victorfreitas-685527.jpg" infoText="Too Good for This Place" />
         </div>
-        <Cart />
+        <Cart imgSrc="/logo-c.jpg"/>
       </div>
     </>
   );

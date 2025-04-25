@@ -16,8 +16,8 @@ interface CardProps {
               <p className="text-sm text-blue-300">{infoText}</p>
           </div>
         </div>
-        <div className="flex justify-center pt-1">
-          <button className="button w-full border rounded border-gray-500 bg-blue-300">Add to Cart</button>
+        <div className="flex justify-center">
+          <button className="button w-full border-gray-500 bg-blue-300">Add to Cart</button>
         </div>
       </div>
     );
