@@ -3,6 +3,7 @@ interface CardProps {
     imgSrc: string;
     infoText: string;
     price: number;
+    onCardClick: (price: number) => void; // Function to handle click
   }
   
   const Card = ({ imgSrc, infoText, price }: CardProps) => {

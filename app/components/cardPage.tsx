@@ -4,13 +4,13 @@ import React, {useState} from "react";
 import Card from "./card";
 import Cart from "./cart";
 
-    const CartPage = () => {
-        const [selectedPrice, setSelectedPrice] = useState(0);
-    
-        const handleCardClick = (price) => {
-          setSelectedPrice(price); // Update state when card is clicked
-        };
-    
+interface CardPageProps {
+    selectedPrice: number;
+    setSelectedPrice: React.Dispatch<React.SetStateAction<number>>;
+  }
+
+    const CardPage: React.FC<CardPageProps> = ({ selectedPrice, setSelectedPrice }) => {
+        
     return (
         <div className="grid grid-cols-3 gap-4 flex-1">
         <Card imgSrc="/pexels-chevanon-302904.jpg" infoText="The Dandy" price={800} />
@@ -28,4 +28,4 @@ import Cart from "./cart";
     );
 };
 
-export default CartPage;
+export default CardPage;
