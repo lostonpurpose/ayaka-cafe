@@ -1,9 +1,11 @@
+'use client'
 interface CardProps {
     imgSrc: string;
     infoText: string;
+    price: number;
   }
   
-  const Card = ({ imgSrc, infoText }: CardProps) => {
+  const Card = ({ imgSrc, infoText, price }: CardProps) => {
     return (
       <div className="card-container">
         <div className="card flex justify-center flex-col w-full relative">
@@ -12,12 +14,13 @@ interface CardProps {
             src={imgSrc}
             alt=""
           />
-          <div className="info absolute top-0 w-full bg-black/50">
+          <div className="info absolute top-0 w-full bg-black/50 flex justify-between">
               <p className="text-sm text-blue-300">{infoText}</p>
+              <p className="text-sm text-blue-300">{price}</p>
           </div>
         </div>
         <div className="flex justify-center">
-          <button className="button w-full border-gray-500 bg-blue-300">Add to Cart</button>
+          <button onClick={() => console.log('Clicked!')} className="button w-full border-gray-500 bg-blue-300">Add to Cart</button>
         </div>
       </div>
     );
