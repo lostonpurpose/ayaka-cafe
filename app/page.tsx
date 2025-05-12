@@ -1,33 +1,23 @@
-'use client'
-import Card from "./components/card";
-import Cart from "./components/cart";
+'use client';
+
+import { useState } from "react";
 import Header from "./components/header";
 import CardPage from "./components/cardPage";
-import { useState } from "react";
+import Cart from "./components/cart";
 
 export default function Home() {
+  const [cartItems, setCartItems] = useState<{ infoText: string; price: number }[]>([]);
 
-  const [selectedPrice, setSelectedPrice] = useState(0);
-
-    // Step 2: Define the onCardClick function
-    const onCardClick = (price: number) => {
-      setSelectedPrice(price);
-    };
+  const onCardClick = (price: number, infoText: string) => {
+    setCartItems((prevItems) => [...prevItems, { infoText, price }]); // Add new item to the list
+  };
 
   return (
     <>
       <Header />
       <div className="flex w-full mt-9">
-      
-        {/* Passing selectedPrice, setSelectedPrice, and onCardClick to CardPage */}
-
-        <CardPage 
-        selectedPrice={selectedPrice}
-        setSelectedPrice={setSelectedPrice}
-        onCardClick={onCardClick}
-        />
-
-        <Cart imgSrc="/logo-c.jpg"/>
+        <CardPage onCardClick={onCardClick} />
+        <Cart cartItems={cartItems} />
       </div>
     </>
   );
