@@ -9,11 +9,24 @@ export default function Home() {
 
   const [selectedPrice, setSelectedPrice] = useState(0);
 
+    // Step 2: Define the onCardClick function
+    const onCardClick = (price: number) => {
+      setSelectedPrice(price);
+    };
+
   return (
     <>
       <Header />
-      <div className="flex w-full">
-        <CardPage selectedPrice={selectedPrice} setSelectedPrice={setSelectedPrice} />
+      <div className="flex w-full mt-9">
+      
+        {/* Passing selectedPrice, setSelectedPrice, and onCardClick to CardPage */}
+
+        <CardPage 
+        selectedPrice={selectedPrice}
+        setSelectedPrice={setSelectedPrice}
+        onCardClick={onCardClick}
+        />
+
         <Cart imgSrc="/logo-c.jpg"/>
       </div>
     </>
