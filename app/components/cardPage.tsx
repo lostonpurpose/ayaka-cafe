@@ -9,7 +9,7 @@ interface CardPageProps {
 
 const CardPage: React.FC<CardPageProps> = ({ onCardClick }) => {
   return (
-    <div className="grid grid-cols-3 gap-4 flex-1 mr-118">
+    <div className="grid grid-cols-3 gap-4 flex-1 mr-118 pb-2 pl-2 pr-2">
       <Card imgSrc="/pexels-chevanon-302904.jpg" infoText="The Dandy" price={800} onCardClick={onCardClick} />
       <Card imgSrc="/pexels-jayoke-851555.jpg" infoText="The Francisco de la Rone" price={500} onCardClick={onCardClick} />
       <Card imgSrc="/pexels-julieaagaard-2351275.jpg" infoText="Cinnamon Purge" price={650} onCardClick={onCardClick} />

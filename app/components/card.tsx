@@ -12,9 +12,9 @@ const Card: React.FC<CardProps> = ({ imgSrc, infoText, price, onCardClick }) => 
     <div className="card-container">
       <div className="card flex justify-center flex-col w-full relative">
         <img className="w-full h-60 object-cover mx-auto" src={imgSrc} alt={infoText} />
-        <div className="info absolute top-0 w-full bg-black/50 flex justify-between">
-          <p className="text-sm text-blue-300">{infoText}</p>
-          <p className="text-sm text-blue-300">${price}</p>
+        <div className="info absolute top-0 w-full bg-black/50 flex justify-between px-3">
+          <p className="text-md text-blue-100">{infoText}</p>
+          <p className="text-md text-blue-100">¥{price}</p>
         </div>
       </div>
       <div className="flex justify-center">

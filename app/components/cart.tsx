@@ -16,6 +16,8 @@ const Cart = ({ cartItems }: CartProps) => {
         <div className="mb-3 font-bold text-2xl text-center">
           <h1>Your Cart</h1>
         </div>
+        <hr />
+        <div className="mb-5"></div>
         <div className="items">
           <ul className="bg-white">
             {cartItems.map((item, index) => (
