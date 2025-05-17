@@ -11,15 +11,15 @@ const Cart = ({ cartItems }: CartProps) => {
   const total = subtotal + subtotal * taxRate;
 
   return (
-    <div className="fixed right-0 px-1 mt-0 bg-amber-100 h-[calc(100vh-48px)] w-[31%] flex flex-col">
+    <div className="fixed right-0 px-1 mt-0 bg-amber-100 h-[calc(100vh-48px)] w-[31%] flex flex-col font">
       <div className="your-cart bg-amber-100 p-4 mb-5 flex-1 overflow-auto">
-        <div className="mb-3">
+        <div className="mb-3 font-bold text-2xl text-center">
           <h1>Your Cart</h1>
         </div>
         <div className="items">
           <ul className="bg-white">
             {cartItems.map((item, index) => (
-              <li key={index} className="item-container flex justify-between border border-blue-300 p-2">
+              <li key={index} className="item-container flex justify-between border-2 border-amber-100 p-2">
                 <div className="item-name">
                   <h1>{item.infoText}</h1>
                 </div>
@@ -34,18 +34,18 @@ const Cart = ({ cartItems }: CartProps) => {
 
       <hr />
 
-      <div className="calculations bg-amber-100 p-4">
+      <div className="calculations bg-amber-100 p-4 font-bold">
         <div className="subtotal flex justify-between mt-4">
-          <h2>Subtotal: ¥</h2>
-          <h2>{subtotal.toFixed(2)}</h2>
+          <h2>Subtotal: </h2>
+          <h2>¥{subtotal.toFixed(2)}</h2>
         </div>
-        <div className="tax flex justify-between">
+        <div className="tax flex justify-between pb-3">
           <h2>Tax: </h2>
           <h2>10%</h2>
         </div>
-        <div className="total flex justify-between">
-          <h1>Total: ¥</h1>
-          <h1>{total.toFixed(2)}</h1>
+        <div className="total flex justify-between text-2xl">
+          <h1>Total: </h1>
+          <h1>¥{total.toFixed(2)}</h1>
         </div>
       </div>
     </div>

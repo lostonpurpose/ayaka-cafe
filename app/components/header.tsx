@@ -9,8 +9,8 @@ const Header = () => {
         </div>
         <ul className="flex space-x-4 items-center">
           <li><a href="/" className="hover:underline">Home</a></li>
-          <li><a href="/menu" className="hover:underline">Menu</a></li>
-          <li><a href="/contact" className="hover:underline">Contact</a></li>
+          <li><a href="#" className="hover:underline">Menu</a></li>
+          <li><a href="#" className="hover:underline">Contact</a></li>
         </ul>
       
         </nav>
