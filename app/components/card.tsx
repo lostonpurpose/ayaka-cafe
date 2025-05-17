@@ -20,7 +20,7 @@ const Card: React.FC<CardProps> = ({ imgSrc, infoText, price, onCardClick }) => 
       <div className="flex justify-center">
         <button
           onClick={() => onCardClick(price, infoText)}
-          className="button w-full border-gray-500 bg-blue-300"
+          className="button w-full h-10 border-gray-500 bg-blue-300"
         >
           Add to Cart
         </button>

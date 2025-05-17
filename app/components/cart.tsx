@@ -7,11 +7,9 @@ interface CartProps {
 
 const Cart = ({ cartItems }: CartProps) => {
   return (
-    <div className="fixed right-0 px-1 bg-white h-full w-[31%]">
-      <div className="flex justify-center bg-white">
-        <img className="object-cover w-30 h-15" src="/logo-c.jpg" alt="Cart Logo" />
-      </div>
-      <div className="your-cart bg-blue-300 p-4 mb-5">
+    <div className="fixed right-0 px-1 mt-3 bg-amber-100 h-full w-[31%]">
+      
+      <div className="your-cart bg-amber-100 p-4 mb-5">
         <div className="mb-3">
           <h1>Your Cart</h1>
         </div>
